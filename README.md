@@ -1,6 +1,6 @@
 # Assignment_3
-https://meadow-walnut-hip.glitch.me/api/paintings
-https://meadow-walnut-hip.glitch.me/api/painting/433
+(https://meadow-walnut-hip.glitch.me/api/paintings)
+(https://meadow-walnut-hip.glitch.me/api/painting/433)
 https://meadow-walnut-hip.glitch.me/api/painting/43374534856
 https://meadow-walnut-hip.glitch.me/api/painting/gallery/7
 https://meadow-walnut-hip.glitch.me/api/painting/gallery/43374534856
