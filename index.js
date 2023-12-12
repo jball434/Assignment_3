@@ -4,9 +4,9 @@ const express = require('express');
 const app = express();
 
 // Load JSON files
-const ARTISTS = './data/artists.json';
-const PAINTINGS = './data/paintings-nested.json';
-const GALLERIES = './data/galleries.json';
+const ARTISTS = './artists.json';
+const PAINTINGS = './paintings-nested.json';
+const GALLERIES = './galleries.json';
 
 // Variables to store the JSON data
 let artistsData; 
@@ -53,7 +53,7 @@ readGalleriesData();
 app.use(express.json());
 
 // Get all paintings
-app.get('/paintings', (req, res) => {
+app.get('/api/paintings', (req, res) => {
   if(JSON.stringify(paintingsData).length > 0) {
   res.json(paintingsData);
   } else {
@@ -62,7 +62,7 @@ app.get('/paintings', (req, res) => {
 });
 
 // Get a specific painting
-app.get('/painting/:id', (req, res) => {
+app.get('/api/painting/:id', (req, res) => {
   const id = req.params.id;
   const painting = paintingsData.find((painting) => painting.paintingID == id);
 
@@ -74,7 +74,7 @@ app.get('/painting/:id', (req, res) => {
 });
 
 // Get a specific gallery
-app.get('/painting/gallery/:id', (req, res) => {
+app.get('/api/painting/gallery/:id', (req, res) => {
   const id = req.params.id;
   const painting = paintingsData.find((painting) => {
     return painting.gallery.galleryID == id;
@@ -88,7 +88,7 @@ app.get('/painting/gallery/:id', (req, res) => {
 });
 
 // Get a specific painting matching the artist
-app.get('/painting/artist/:id', (req, res) => {
+app.get('/api/painting/artist/:id', (req, res) => {
   const id = req.params.id;
   const artist = paintingsData.find((painting) => {
     return painting.artist.artistID == id;
@@ -102,7 +102,7 @@ app.get('/painting/artist/:id', (req, res) => {
 });
 
 // Get the painting within the date range
-app.get('/painting/year/:min/:max', (req, res) => {
+app.get('/api/painting/year/:min/:max', (req, res) => {
   const min = req.params.min;
   const max = req.params.max;
 
@@ -118,7 +118,7 @@ app.get('/painting/year/:min/:max', (req, res) => {
 });
 
 // Get the painting with title containing specific text
-app.get('/painting/title/:text', (req, res) => {
+app.get('/api/painting/title/:text', (req, res) => {
   const text = req.params.text;
   const paintings = paintingsData.filter((painting) => {
     return (painting.title).toLowerCase().includes(text.toLowerCase());
@@ -132,7 +132,7 @@ app.get('/painting/title/:text', (req, res) => {
 });
 
 // Get the painting with a specific color name
-app.get('/painting/color/:name', (req, res) => {
+app.get('/api/painting/color/:name', (req, res) => {
   const name = req.params.name;
   const paintings = paintingsData.filter((painting) => {
     let arrayColor = painting.details.annotation.dominantColors;
@@ -153,7 +153,7 @@ app.get('/artists', (req, res) => {
 });
 
 // Get a specific artist
-app.get('/artists/:country', (req, res) => {
+app.get('/api/artists/:country', (req, res) => {
   const country = req.params.country;
   const artists = artistsData.filter((artist) => {
     return artist.Nationality.toLowerCase() == country.toLowerCase();
@@ -167,7 +167,7 @@ app.get('/artists/:country', (req, res) => {
 });
 
 // Get all the galleries
-app.get('/galleries', (req, res) => {
+app.get('/api/galleries', (req, res) => {
   if(JSON.stringify(galleriesData).length > 0) {
     res.json(galleriesData);
   } else {
@@ -176,7 +176,7 @@ app.get('/galleries', (req, res) => {
 });
 
 // Get gallery by country
-app.get('/galleries/:country', (req, res) => {
+app.get('/api/galleries/:country', (req, res) => {
   const country = req.params.country;
   const galleries = galleriesData.filter((gal) => {
     return gal.gallery.country.toLowerCase() == country.toLowerCase();
@@ -190,7 +190,7 @@ app.get('/galleries/:country', (req, res) => {
 });
 
 // Start the Express server
-const PORT = 4000;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
