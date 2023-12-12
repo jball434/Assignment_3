@@ -1,1 +1,21 @@
 # Assignment_3
+https://meadow-walnut-hip.glitch.me/api/paintings
+https://meadow-walnut-hip.glitch.me/api/painting/433
+https://meadow-walnut-hip.glitch.me/api/painting/43374534856
+https://meadow-walnut-hip.glitch.me/api/painting/gallery/7
+https://meadow-walnut-hip.glitch.me/api/painting/gallery/43374534856
+https://meadow-walnut-hip.glitch.me/api/painting/artist/106
+https://meadow-walnut-hip.glitch.me/api/painting/artist/43374534856
+https://meadow-walnut-hip.glitch.me/api/painting/year/1850/1900
+https://meadow-walnut-hip.glitch.me/api/painting/year/2200/2400
+https://meadow-walnut-hip.glitch.me/api/painting/title/self
+https://meadow-walnut-hip.glitch.me/api/painting/title/dfjkghdfkgh
+https://meadow-walnut-hip.glitch.me/api/painting/color/NAPA
+https://meadow-walnut-hip.glitch.me/api/painting/color/coffee%20bean
+https://meadow-walnut-hip.glitch.me/api/painting/color/kcvhvxchbkcj
+https://meadow-walnut-hip.glitch.me/api/artists
+https://meadow-walnut-hip.glitch.me/api/artists/Netherlands
+https://meadow-walnut-hip.glitch.me/api/artists/sdfjjsdf
+https://meadow-walnut-hip.glitch.me/api/galleries
+https://meadow-walnut-hip.glitch.me/api/galleries/france
+https://meadow-walnut-hip.glitch.me/api/galleries/kcvhvxchbkcj
